@@ -1,0 +1,7 @@
+apply plugin: 'java'
+
+task executeProgram(type: JavaExec, dependsOn: ':build'){
+    classpath sourceSets.main.runtimeClasspath
+    main="StringCompression"
+    standardInput = System.in
+}
